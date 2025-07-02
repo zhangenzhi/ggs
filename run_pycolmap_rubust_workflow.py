@@ -202,7 +202,7 @@ def main():
     parser.add_argument('--img_width', type=int, default=1024, help="透视图片的宽度。")
     parser.add_argument('--img_height', type=int, default=1024, help="透视图片的高度。")
     parser.add_argument('--fov_deg', type=float, default=90.0, help="透视图片的视场角(度)。")
-    parser.add_argument('--num_threads', type=int, default=32, help="COLMAP使用的线程数(-1表示所有可用线程)。")
+    parser.add_argument('--num_threads', type=int, default=48, help="COLMAP使用的线程数(-1表示所有可用线程)。")
     parser.add_argument('--sift_max_features', type=int, default=16384, help="SIFT特征提取的最大特征点数。")
 
     args = parser.parse_args()
