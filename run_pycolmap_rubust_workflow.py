@@ -197,13 +197,13 @@ def main():
         description="使用pycolmap和GPS先验，以稳健方式从全景图自动生成稀疏模型。"
     )
     
-    parser.add_argument('--source_data_folder', type=str, required=True, help="包含原始全景图和JSON元数据的文件夹。")
-    parser.add_argument('--project_name', type=str, default="colmap_robust_project", help="将要创建的最终COLMAP项目文件夹名。")
+    parser.add_argument('--source_data_folder', type=str, required="./dataset/dataset_high_density_v2_cut", help="包含原始全景图和JSON元数据的文件夹。")
+    parser.add_argument('--project_name', type=str, default="dataset/colmap_robust_project", help="将要创建的最终COLMAP项目文件夹名。")
     parser.add_argument('--img_width', type=int, default=1024, help="透视图片的宽度。")
     parser.add_argument('--img_height', type=int, default=1024, help="透视图片的高度。")
     parser.add_argument('--fov_deg', type=float, default=90.0, help="透视图片的视场角(度)。")
-    parser.add_argument('--num_threads', type=int, default=-1, help="COLMAP使用的线程数(-1表示所有可用线程)。")
-    parser.add_argument('--sift_max_features', type=int, default=8192, help="SIFT特征提取的最大特征点数。")
+    parser.add_argument('--num_threads', type=int, default=32, help="COLMAP使用的线程数(-1表示所有可用线程)。")
+    parser.add_argument('--sift_max_features', type=int, default=16384, help="SIFT特征提取的最大特征点数。")
 
     args = parser.parse_args()
     
