@@ -197,7 +197,7 @@ def main():
         description="使用pycolmap和GPS先验，以稳健方式从全景图自动生成稀疏模型。"
     )
     
-    parser.add_argument('--source_data_folder', type=str, required="./dataset/dataset_high_density_v2_cut", help="包含原始全景图和JSON元数据的文件夹。")
+    parser.add_argument('--source_data_folder', type=str, default="./dataset/dataset_high_density_v2_cut", help="包含原始全景图和JSON元数据的文件夹。")
     parser.add_argument('--project_name', type=str, default="dataset/colmap_robust_project", help="将要创建的最终COLMAP项目文件夹名。")
     parser.add_argument('--img_width', type=int, default=1024, help="透视图片的宽度。")
     parser.add_argument('--img_height', type=int, default=1024, help="透视图片的高度。")
