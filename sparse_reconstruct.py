@@ -14,7 +14,7 @@ os.makedirs(output_path, exist_ok=True)
 # --- 更正之处 ---
 # 使用正确的函数 pycolmap.incremental_mapper
 # 并使用正确的参数名 image_dir
-summary = pycolmap.IncrementalMapper(
+summary = pycolmap.incremental_mapping(
     database_path=database_path,
     image_dir=image_dir,
     output_path=output_path,
